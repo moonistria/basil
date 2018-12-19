@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0daf53845c","applicationID":"126096290","transactionName":"Il1aRxELWg9US0taWw5cXUAXFl8CERZL","queueTime":0,"applicationTime":113,"agent":""}</script>
+    <script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="tMARwd2K7J8wcGNAFOKAozbKhJOCXKH/Hpl14fF9QmL0SCl4WARvXRUIiv1ho/CvFzYqqoMpaUlYph1bZ1p7nQ==">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/i18n/jquery-ui-i18n.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/0.5.9/client.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnvX_a2m4EIzbfeKADk-rfF3ZXkGz3veg&libraries=places"></script>
+    <script src="https://registria-templates.s3.amazonaws.com/Quickstart/latest/scripts/vendor.js"></script>
+    <script src="https://registria-templates.s3.amazonaws.com/Quickstart/latest/scripts/quickstart.js"></script>
+    <!--<link rel="stylesheet" href="https://registria-templates.s3.amazonaws.com/Quickstart/latest/styles/quickstart.css">-->
+    <link rel="stylesheet" href="styles/quickstart.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <!--<link rel="stylesheet" href="styles/custom.css">-->
+    <title>Lunastria Registration</title>
+    <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/favicons/783/original/download.png?1544890824">
+    <script type="text/javascript">$.IPInfo={"country_code":"US","country_code3":"USA","country_name":"United States","region":"CO","region_name":"Colorado","city":"Lafayette","postal_code":"80026","latitude":40.01530075073242,"longitude":-105.10759735107422,"dma_code":751,"area_code":303};$.currentLocale="en";$.airbrake=new airbrakeJs.Client({projectId:134633,projectKey:'6cf15375c6ff1a244ffd1281c8221df7'});$.airbrake.addFilter(function(notice){notice.context.environment='staging';return notice;});</script>
+  </head>
+  <body>
+    <script>var RegistriaTranslations={"required":"Required","validationEmailInvalid":"Invalid email address","validationNoFutureDate":"Date should not be in the future","validationInstallNumberLength":"Installation Number should be 5 digits"};if($.IPInfo.country_code==='CA'){window.location=window.location.origin+'/en-ca'+window.location.pathname+window.location.search;};$(document).ready(function(){$('#receive_product_communication').val(1);$('.check-fa-o').hide();$('.check-fa').show();});function isFutureDate(idate){var today=new Date().getTime(),idate=idate.split("/");idate=new Date(idate[2],idate[1]-1,idate[0]).getTime();return(today-idate)<0?true:false;}</script>
+    <div class="header-mast"></div>
+    <div class="wrapper">
+      <form id="registria_form" enctype="multipart/form-data" action="/core/registrations" method="POST">
+        <header class="header main-header">
+          <div class="grid display-web-header">
+            <div style="float: left;" class="col-1-2 sm-1 logo-center">
+              <a href=" }}" target="_blank">
+                <script data-pagespeed-no-defer>//<![CDATA[
+                  (function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://lunastria.registriaqa.com/','2L-ZMDIrHf',true,false,'w7wmUzbj7zU');
+                  //]]>
+                </script><img src="https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/site_logos/743/original/pinnacle-climate-technologies-logo_thumb.jpg?1538408688" alt="Lunastria" class="logo" style="max-width:180px" data-pagespeed-url-hash="1952844626" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+              </a>
+            </div>
+            <div class="col-1-2 nav-wrap-div" style="float:right;">
+              <nav class="nav-wrap float-right" style="float:right;">
+                <ul>
+                  <li class="nav-dropdown">
+                    <a class="right">
+                      US-English 
+                      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-down" width="10" height="10" viewBox="0 0 10 10">
+                        <polygon fill="#000000" points="0,3 5,10 10,3"/>
+                      </svg>
+                    </a>
+                    <ul class="language-select" style="display:none;">
+                      <li><a class="langauge" href="/en/">US-English</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- End of display-web-header -->
+          <div class="display-mobile-header">
+            <div class="col-1-1">
+              <nav class="mobile-menu-wrap">
+                <ul class="mobile-menu-ul-style">
+                  <li class="nav-dropdown">
+                    <a id="language-selector" class="right">
+                      <i class="fa fa-language"></i>
+                    </a>
+                    <ul class="language-select" style="display:none;">
+                      <li><a class="language-close" href="#"><i class="fa fa-times"></i></a></li>
+                      <li><a class="langauge" href="/en/">US-English</a></li>
+                      <li><a class="langauge" href="/en/">FR-French</a></li>
+                      <li><a class="langauge" href="/en/">ES-Spanish</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-1-2 logo-center"><img src="https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/site_logos/743/original/pinnacle-climate-technologies-logo_thumb.jpg?1538408688" alt="Lunastria" class="logo" style="max-width:150px; max-height:75px;" data-pagespeed-url-hash="1952844626" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+          </div>
+          <!-- End of mobile-display-header -->
+        </header>
+        <script>
+          $("#language-selector").click(function(){
+            $(".language-select").css('display', 'block');
+          });
+          $(".language-close").click(function(){
+            $(".language-select").css('display', 'none');
+          });
+        </script>
+
+        <script>$(window).load(function(){var header_height=$('.header').height();$('.fa-bars').height(header_height);$('.mobile-menu-wrap').click(function(){$('.mobile-menu-wrap ul').css({"background-color":"#0c2645"});$('.mobile-menu-wrap ul a').css({"color":"#FFF","border-bottom":"1px solid #000","padding":"20px 0","margin":"0 20px"});});$('.mobile-menu-wrap ul ul a').click(function(){console.log("mobile menu wrap ul ul a click");$('.mobile-menu-wrap ul').css({"background-color":"#FFF"});$('.mobile-menu-wrap ul li a:active').css({"background-color":"#FFF"});});});</script><script>$(window).load(function(){var RegistriaTranslations={"required":"Required","validationNoFutureDate":"Date should not be in the future",}
+          if($('#purchase_date').length>0){$('#purchase_date').rules('add',{messages:{futureDate:RegistriaTranslations.required}});$('#purchase_date').on('keyup',function(){console.log("here in purchase date");if((isFutureDate($('#purchase_date').val()))){$('#purchase_date').rules('add',{messages:{futureDate:RegistriaTranslations.validationNoFutureDate}});}else{$('#purchase_date').rules('add',{messages:{futureDate:RegistriaTranslations.required}});}});}function isFutureDate(idate){var today=new Date().getTime(),idate=idate.split("/");idate=new Date(idate[2],idate[1]-1,idate[0]).getTime();return(today-idate)<0?true:false;}});
+        </script><script>$(window).load(function(){var zip_validation_message="Invalid zip code entered.";$.validator.addMethod('strictZip',function(value,element){return $(element).data("valid_zip");},zip_validation_message);if($('#zip').exists()){$("#zip").data("valid_zip",false);$('#zip').rules('add',{strictZip:true});}$("#registria_form").on('blur change keyup','#zip',function(){var regEx=/^[0-9]{5}$/i;if(regEx.test($("#zip").val()))$("#zip").data("valid_zip",true);else
+          $("#zip").data("valid_zip",false);});});
+        </script> 
+        <div class="row progressbar">
+					<div class="col-sm-12">
+						<!-- multistep form -->
+						<div id="msform">
+							<!-- progressbar -->
+							<ul id="progressbar">
+								<li class="active">
+									<div class="nav-wedge"></div>
+									<div class="fs-title">Step 1</div>
+									<div class="fs-subtitle">Registration</div>
+									<div class="nav-arrow"></div>
+								</li>
+								<li>
+									<div class="nav-wedge"></div>
+									<div class="num_image">
+										<div class="progressbar-num">
+											<div class="num_align">2</div>
+										</div>
+									</div>
+									<div class="nav-arrow"></div>
+								</li>
+								<li>
+									<div class="nav-wedge"></div>
+									<div class="num_image">
+										<div class="progressbar-num">
+											<div class="num_align">3</div>
+										</div>
+									</div>
+									<div class="nav-arrow"></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>   
+        <div class="main-wrapper">
+          <h1 class="cta-padding">Title</h1>
+          <h2 class="cta-padding" style="margin-top:0.5em;">Subtitle</h2>
+          <p style="font-size:74%;color:#717171;margin-bottom: 20px">* All fields are required.</p>
+          <h3 class="section-header">Your Product</h3>
+          <div class="sub-content">
+            <div class="grid">
+              <div class="col-1-2"><label for="model"><span class="label-text">Model Number *</span>  <input type="text" autocomplete="off" class="autocomplete-product registria_field" name="registration[model]" id="model" value="" data-model-string="{name} ({sku})" required>  <input type="hidden" id="product" name="registration[product_id]" class="registria_field" value=""></label></div>
+              <div class="col-1-2"><label for="serial"><span class="label-text">Serial Number</span><input class="registria_field" id="serial" name="registration[serial_number]" value="" type="text"></label></div>
+            </div>
+          </div>
+          <h3 class="section-header">Your Information</h3>
+          <div class="sub-content">
+            <div class="grid">
+              <div class="col-1"><label for="first_name"><span class="label-text">Full Name *</span> <input type="text" id="full_name" class="full-name" required></label></div>
+            </div>
+            <div class="grid">
+              <div class="col-1-2"><label for="email"><span class="label-text">Email Address *</span> <input class="registria_field" id="email" name="user[email]" type="email" value="" required></label></div>
+              <div class="col-1-2"><label for="phone"><span class="label-text">Phone Number *</span> <input class="registria_field mask-phone" id="phone" name="user[phone]" type="tel" value="" required></label></div>
+            </div>
+            <div class="grid">
+              <div class="col-3-4">
+                <label for="address1"><span class="label-text">Street Address *</span> <input class="registria_field" id="address1" name="user[address_attributes][address1]" placeholder="Enter a location" type="text" placeholder="" required></label><!-- Google Address Autofill -->
+                <div id="map"></div>
+                <div id="infowindow-content"><img src="" width="16" height="16" id="place-icon" data-pagespeed-url-hash="1784342951" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <span id="place-address"></span></div>
+              </div>
+              <div class="col-1-4"><label for="address2"><span class="label-text">Unit/Suite</span><input class="registria_field" id="address2" name="user[address_attributes][address2]" type="text"></label></div>
+            </div>
+            <div class="grid">
+              <div class="col-1-3 med-1"><label for="zip"><i class="fa fa-map-marker fa-lg geo-trigger" aria-hidden="true"></i> <span class="label-text">ZIP Code *</span> <input class="registria_field reverse-zip" id="zip" name="user[address_attributes][zip]" type="tel" required>  <input class="registria_field" id="country" name="user[address_attributes][country]" type="hidden" value="United States">  </label></div>
+              <div class="col-1-3 med-1"><label for="city"><span class="label-text">City *</span> <input class="registria_field" id="city" name="user[address_attributes][city]" type="text" required></label></div>
+              <div class="col-1-3 med-1"><label for="state"><span class="label-text state">State *</span> <input class="registria_field autocomplete-state" id="state" name="user[address_attributes][state]" autocomplete="off" type="text" required></label></div>
+            </div>
+          </div>
+          <h3 class="section-header">Purchase Information</h3>
+          <div class="sub-content">
+            <div class="grid">
+              <div class="col-1-2"><label for="purchased_at"><span class="label-text">Purchase Location *</span> <input type="text" class="registria_field autocomplete-organizations" name="registration[purchased_at]" id="purchased_at" autocomplete="off" required></label></div>
+              <div class="col-1-2"><label for="purchase_date"><span class="label-text">Date of Purchase *</span> <input type="tel" class="registria_field mask-date" name="registration[purchase_date]" id="purchase_date" required></label></div>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="sm-1 col-2-2"><label for="receive_product_communication"><input type="checkbox" class="registria_field" id="receive_product_communication" name="user[receive_product_communication]" value="1" checked="checked"> <span class="pref-text"> opt_in_text</span></label></div>
+          </div>
+          <input type="hidden" class="registria_field" id="input_version" name="registration[input_version]" value="DDDDDD"> <input type="hidden" class="registria_field" id="locale" name="user[locale]" value="en">   
+          <div class="grid" style="margin-top:1.5em"><input type="hidden" name="_method" value="POST"> <input class="registria_field" name="authenticity_token" value="tMARwd2K7J8wcGNAFOKAozbKhJOCXKH/Hpl14fF9QmL0SCl4WARvXRUIiv1ho/CvFzYqqoMpaUlYph1bZ1p7nQ==" type="hidden"> <input id="next_button" value="REGISTER" type="submit"></div>
+          <div class="row">
+            <div class="col-sm-12 privacy_footer"><a class="privacy_footer" href="privacy_policy" target="_blank"> Privacy Policy</a>| ©2018Lunastria </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>$('#address1').on('blur',function(){setTimeout(function(){$('#zip').focus();$('#state').focus();$('#city').focus();$('#zip').focus();},200);});</script>
+  </body>
+</html>
