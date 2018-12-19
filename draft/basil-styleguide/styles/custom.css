@@ -1,0 +1,207 @@
+.header-mast{
+    background-color: #79C1F1;
+    height: 270px;
+}
+.wrapper{
+    margin-top: -220px;
+    padding: 30px;
+    background-color: #FFFFFF;
+    max-width: 800px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    margin-bottom: 0px;
+    z-index: 0;
+}
+body{
+    background-color: #f5fbfe;
+    padding-bottom: 32px;
+}
+.main-header{
+    border-bottom: none;
+    background-color: #FFFFFF !important;
+}
+.display-web-header{
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.logo{
+    margin: 0;
+}
+.nav-wrap{
+    margin-top: 0px;
+}
+h1.cta-padding{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #323333;
+}
+h2.cta-padding{
+    margin-top: 0px !important;
+    font-size: 14px;
+    color: #878888;
+    line-height: 20px;
+}
+.main-wrapper{
+    padding: 0px;
+}
+.section-header{
+    background-color: #FFFFFF !important;
+    color: #323333 !important;
+    padding-left: 0px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-top: 0px;
+}
+.sub-content{
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.progressbar{
+    display: none;
+}
+#progressbar{
+    margin-bottom: 20px;
+}
+#progressbar li:first-child{
+    border-left: 0;
+}
+#progressbar li{
+    position: relative;
+    overflow: visible;
+    border-right: 14px solid #FFF;
+    border-left: 14px solid #FFF;
+    line-height: 20px;
+    background-color: #878888;
+}
+#progressbar .nav-arrow{
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 20px;
+    border-color: transparent transparent transparent #878888;
+    z-index: 150;
+}
+#progressbar li.active{
+    background-color: #323333 !important;
+}
+#progressbar li.active .nav-arrow{
+    border-color: #323333;
+}
+#progressbar li.active .nav-arrow{
+    border-color: transparent transparent transparent #323333;
+}
+#progressbar .nav-wedge {
+    position: absolute;
+    top: 0;
+    left: -23px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 4px 25px 20px;
+    border-color: #878888 #878888 #878888 transparent;
+    z-index: 150;
+}
+#progressbar li.active .nav-wedge{
+    border-color: #323333 #323333 #323333 transparent;
+}
+#progressbar li:last-child{
+    border-right: 0;
+}
+#progressbar li:first-child .nav-wedge{
+    display: none;
+}
+#progressbar li:last-child .nav-arrow{
+    display: none;
+}
+.progressbar-num{
+    height: 30px;
+    width: 30px;
+    font-size: 2.5em;
+}
+.num_image{
+    padding-top: 11px;
+}
+.num_align{
+    margin-top: 3px;
+    margin-left: 1px;
+}
+#next_button{
+    transition: background-color 0.25s ease;
+    background-color: #79C1F1;
+}
+#next_button:hover{
+    transform: translateY(0px);
+    background-color: rgb(92, 184, 245);
+}
+@media (max-width: 1024px) {
+    body{
+        padding-bottom: 0px;
+    }
+    .main-header{
+        padding-right: 0px;
+    }
+    .header-mast{
+        display: none;
+    }
+    .wrapper{
+        margin-top: 0px;
+        padding: 10px;
+    }
+    .display-web-header{
+        display: none;
+    }
+    .mobile-menu-wrap ul{
+        float: right;
+        background-color: #FFFFFF !important;
+        position: initial;
+    }
+    .mobile-menu-wrap ul a{
+        font-size: 28px;
+        color: #111 !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-bottom: none !important;
+    }
+    .mobile-menu-wrap ul li a:hover{
+        background: transparent;
+    }
+    .logo-center{
+        padding-top: 2em;
+    }
+    .mobile-menu-wrap ul ul{
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .mobile-menu-wrap ul ul li{
+        width: 100%;
+        line-height: 20px;
+    }
+    .mobile-menu-wrap ul ul li a{
+        border-bottom: 1px solid #CCC !important;
+        font-size: 18px;
+        padding: 20px 10px !important;
+    }
+    .mobile-menu-wrap ul ul li:first-child a{
+        padding-top: 10px !important;
+        border-bottom: none !important;
+    }
+    .mobile-menu-wrap ul li{
+        background-color: #FFFFFF;
+        position: initial;
+    }
+    .mobile-menu-wrap ul ul li a.language-close{
+        text-align: right;
+        padding-top: 10px;
+        font-size: 24px;
+    }
+}

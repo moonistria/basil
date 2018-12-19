@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0daf53845c","applicationID":"126096290","transactionName":"Il1aRxELWg9US0taWw5cXUAXFl8CERZL","queueTime":0,"applicationTime":113,"agent":""}</script>
+    <script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="tMARwd2K7J8wcGNAFOKAozbKhJOCXKH/Hpl14fF9QmL0SCl4WARvXRUIiv1ho/CvFzYqqoMpaUlYph1bZ1p7nQ==">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/i18n/jquery-ui-i18n.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/0.5.9/client.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnvX_a2m4EIzbfeKADk-rfF3ZXkGz3veg&libraries=places"></script>
+    <script src="https://registria-templates.s3.amazonaws.com/Quickstart/latest/scripts/vendor.js"></script>
+    <script src="https://registria-templates.s3.amazonaws.com/Quickstart/latest/scripts/quickstart.js"></script>
+    <link rel="stylesheet" href="https://registria-templates.s3.amazonaws.com/Quickstart/latest/styles/quickstart.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <!--<link rel="stylesheet" href="styles/custom.css">-->
+    <title>Lunastria Registration</title>
+    <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/favicons/783/original/download.png?1544890824">
+    <script type="text/javascript">$.IPInfo={"country_code":"US","country_code3":"USA","country_name":"United States","region":"CO","region_name":"Colorado","city":"Lafayette","postal_code":"80026","latitude":40.01530075073242,"longitude":-105.10759735107422,"dma_code":751,"area_code":303};$.currentLocale="en";$.airbrake=new airbrakeJs.Client({projectId:134633,projectKey:'6cf15375c6ff1a244ffd1281c8221df7'});$.airbrake.addFilter(function(notice){notice.context.environment='staging';return notice;});</script>
+    <style>#progressbar li.active,.section-header{}.button-primary,#next_button{}.main-header{}</style>
+		<style>
+			pre{
+				border: 1px solid #CCC;
+				background-color: #333;
+        color: #FFF;
+        margin-bottom: 20px;
+			}
+			pre::before{
+				content: 'HTML';
+				margin-bottom: 10px;
+				display: block;
+      }
+      .display-none{
+        display: none;
+      }
+      .wrapper.container{
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        background-color: #FFFFFF;
+        padding: 15px;
+        margin-top: -200px;
+      }
+      .header-mast{
+          background-color: #56B1C3;
+          height: 270px;
+      }
+      .sg-header{
+        font-size: 20px;
+        font-weight: 400;
+        border-bottom: 1px solid #708090;
+        color: #36454f;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .sg-table{
+        width: 100%;
+      }
+      .sg-table tbody{
+        border-bottom: none;
+      }
+      .sg-table tr:nth-child(even){
+        background-color: #efefef;
+      }
+      .sg-table tbody td{
+        text-align: left !important;
+        width: 50% !important;
+        padding: 5px !important;
+      }
+		</style>
+	</head>
+  <body>
+    <div class="header-mast"></div>
+    <div class="wrapper container">
+      <h1>Basil Styleguide</h1>
+      <a href="#" id="show-hide-html">Show/Hide HTML</a>
+      &nbsp;|&nbsp;
+      <a href="full.html" id="show-hide-html">View Full Layout</a>
+      <h1 class="sg-header">Styles & Typography</h1>
+      <table class="sg-table">
+        <tbody>
+          <tr>
+            <td>Font-family:</td>
+            <td>Open Sans</td>
+          </tr>
+          <tr>
+            <td>Body background-color:</td>
+            <td>#efefef</td>
+          </tr>
+          <tr>
+            <td>Label color:</td>
+            <td>#717171</td>
+          </tr>
+          <tr>
+            <td>Input background-color:</td>
+            <td>#efefef</td>
+          </tr>
+          <tr>
+            <td>Input border-color:</td>
+            <td>#e0e0e0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 class="sg-header">Customizable Components</h1>
+      <table class="sg-table">
+        <tbody>
+          <tr>
+            <td>Logo:</td>
+            <td>Best logo is a 2:1 ratio. Max-width on desktop is 180px. Max-width on mobile is 150px.</td>
+          </tr>
+          <tr>
+            <td>Favicon:</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Page Header Background:</td>
+            <td>Default is #fff</td>
+          </tr>
+          <tr>
+            <td>Section Header Text:</td>
+            <td>Default is #fff</td>
+          </tr>
+          <tr>
+            <td>Button Backbround:</td>
+            <td>Default is #58b0e2</td>
+          </tr>
+          <tr>
+            <td>Button Text:</td>
+            <td>Default is #fff</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 class="sg-header">Page Header</h1>
+      <pre class="html display-none"><code>
+&lt;header class=&quot;header main-header&quot;&gt;
+  &lt;div class=&quot;grid display-web-header&quot;&gt;
+    &lt;div style=&quot;float: left;&quot; class=&quot;col-1-2 sm-1 logo-center&quot;&gt;&lt;a href=&quot;http://pinnacleclimate.com/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/site_logos/743/original/pinnacle-climate-technologies-logo_thumb.jpg?1538408688&quot; alt=&quot;Pinnacle Climate&quot; class=&quot;logo&quot; style=&quot;max-width:180px&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-1-2 nav-wrap-div&quot; style=&quot;float:right;&quot;&gt;
+      &lt;nav class=&quot;nav-wrap float-right&quot; style=&quot;float:right;&quot;&gt;
+        &lt;ul&gt;
+          &lt;li class=&quot;nav-dropdown&quot;&gt;
+            &lt;a class=&quot;right&quot;&gt;
+              US-English 
+              &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;arrow-down&quot; width=&quot;10&quot; height=&quot;10&quot; viewBox=&quot;0 0 10 10&quot;&gt;
+                &lt;polygon fill=&quot;#000000&quot; points=&quot;0,3 5,10 10,3&quot;/&gt;
+              &lt;/svg&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;language-select&quot; style=&quot;display:none;&quot;&gt;
+              &lt;li&gt;&lt;a class=&quot;langauge&quot; href=&quot;/en/&quot;&gt;US-English&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- End of display-web-header --&gt;
+  &lt;div class=&quot;display-mobile-header&quot;&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;
+      &lt;nav class=&quot;mobile-menu-wrap&quot;&gt;
+        &lt;ul class=&quot;mobile-menu-ul-style&quot;&gt;
+          &lt;li class=&quot;mobile-menu-dropdown&quot;&gt;
+            &lt;i class=&quot;fa fa-bars fa-2x pull-right&quot; style=&quot;padding: 0 20px; margin: auto;display: flex;justify-content: center; flex-direction: column;&quot;&gt;&lt;/i&gt;
+            &lt;ul class=&quot;menu-select&quot; style=&quot;display:none;&quot;&gt;
+              &lt;li&gt;&lt;a class=&quot;menu&quot; href=&quot;/en/&quot;&gt;US-English&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-1-2 logo-center&quot;&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/site_logos/743/original/pinnacle-climate-technologies-logo_thumb.jpg?1538408688&quot; alt=&quot;Pinnacle Climate&quot; class=&quot;logo&quot; style=&quot;max-width:150px; max-height:75px;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- End of mobile-display-header --&gt;
+&lt;/header&gt;
+      </code></pre>
+      <div class="wrapper">
+        <header class="header main-header">
+          <div class="grid display-web-header">
+            <div style="float: left;" class="col-1-2 sm-1 logo-center"><a href="http://pinnacleclimate.com/" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/site_logos/743/original/pinnacle-climate-technologies-logo_thumb.jpg?1538408688" alt="Pinnacle Climate" class="logo" style="max-width:180px"></a></div>
+            <div class="col-1-2 nav-wrap-div" style="float:right;">
+              <nav class="nav-wrap float-right" style="float:right;">
+                <ul>
+                  <li class="nav-dropdown">
+                    <a class="right">
+                      US-English 
+                      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-down" width="10" height="10" viewBox="0 0 10 10">
+                        <polygon fill="#000000" points="0,3 5,10 10,3"/>
+                      </svg>
+                    </a>
+                    <ul class="language-select" style="display:none;">
+                      <li><a class="langauge" href="/en/">US-English</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- End of display-web-header -->
+          <div class="display-mobile-header">
+            <div class="col-1-2">
+              <nav class="mobile-menu-wrap">
+                <ul class="mobile-menu-ul-style">
+                  <li class="mobile-menu-dropdown">
+                    <i class="fa fa-bars fa-2x pull-right" style="padding: 0 20px; margin: auto;display: flex;justify-content: center; flex-direction: column;"></i>
+                    <ul class="menu-select" style="display:none;">
+                      <li><a class="menu" href="/en/">US-English</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-1-2 logo-center"><img src="https://s3-us-west-2.amazonaws.com/registria-sysadmin-assets-staging/sites/site_logos/743/original/pinnacle-climate-technologies-logo_thumb.jpg?1538408688" alt="Pinnacle Climate" class="logo" style="max-width:150px; max-height:75px;"></div>
+          </div>
+          <!-- End of mobile-display-header -->
+        </header>
+      </div>
+      <h1 class="sg-header">Progress Bar</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-12&quot;&gt;
+    &lt;!-- multistep form --&gt;
+    &lt;div id=&quot;msform&quot;&gt;
+      &lt;!-- progressbar --&gt;
+      &lt;ul id=&quot;progressbar&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;
+          &lt;div class=&quot;nav-wedge&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;fs-title&quot;&gt;Step 1&lt;/div&gt;
+          &lt;div class=&quot;fs-subtitle&quot;&gt;Registration&lt;/div&gt;
+          &lt;div class=&quot;nav-arrow&quot;&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;nav-wedge&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;num_image&quot;&gt;
+            &lt;div class=&quot;progressbar-num&quot;&gt;
+              &lt;div class=&quot;num_align&quot;&gt;2&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nav-arrow&quot;&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;nav-wedge&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;num_image&quot;&gt;
+            &lt;div class=&quot;progressbar-num&quot;&gt;
+              &lt;div class=&quot;num_align&quot;&gt;3&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nav-arrow&quot;&gt;&lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- multistep form -->
+            <div id="msform">
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active">
+                  <div class="nav-wedge"></div>
+                  <div class="fs-title">Step 1</div>
+                  <div class="fs-subtitle">Registration</div>
+                  <div class="nav-arrow"></div>
+                </li>
+                <li>
+                  <div class="nav-wedge"></div>
+                  <div class="num_image">
+                    <div class="progressbar-num">
+                      <div class="num_align">2</div>
+                    </div>
+                  </div>
+                  <div class="nav-arrow"></div>
+                </li>
+                <li>
+                  <div class="nav-wedge"></div>
+                  <div class="num_image">
+                    <div class="progressbar-num">
+                      <div class="num_align">3</div>
+                    </div>
+                  </div>
+                  <div class="nav-arrow"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="sg-header">Title & Subtitle</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;main-wrapper&quot;&gt;
+  &lt;h1 class=&quot;cta-padding&quot;&gt; Product Registration &lt;/h1&gt;
+  &lt;h2 class=&quot;cta-padding&quot; style=&quot;margin-top:0.5em;&quot;&gt;Register your Pinnacle product today to protect your purchase&lt;/h2&gt;
+  &lt;p style=&quot;font-size:74%;color:#717171;margin-bottom: 20px&quot;&gt;* Required Fields.&lt;/p&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <h1 class="cta-padding"> Product Registration </h1>
+          <h2 class="cta-padding" style="margin-top:0.5em;">Register your Pinnacle product today to protect your purchase</h2>
+          <p style="font-size:74%;color:#717171;margin-bottom: 20px">* Required Fields.</p>
+        </div>
+      </div>
+      <h1 class="sg-header">Product Section</h1>
+      <pre class="html display-none"><code>
+&lt;h3 class=&quot;section-header&quot;&gt;Your Product&lt;/h3&gt;
+&lt;div class=&quot;sub-content&quot;&gt;
+  &lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;&lt;label for=&quot;model&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Model Number *&lt;/span&gt;  &lt;input type=&quot;text&quot; autocomplete=&quot;off&quot; class=&quot;autocomplete-product registria_field&quot; name=&quot;registration[model]&quot; id=&quot;model&quot; value=&quot;&quot; data-model-string=&quot;{name} ({sku})&quot; required=&quot;&quot;&gt;  &lt;input type=&quot;hidden&quot; id=&quot;product&quot; name=&quot;registration[product_id]&quot; class=&quot;registria_field&quot; value=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;&lt;label for=&quot;serial&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Serial Number&lt;/span&gt;&lt;input class=&quot;registria_field&quot; id=&quot;serial&quot; name=&quot;registration[serial_number]&quot; value=&quot;&quot; type=&quot;text&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <h3 class="section-header">Your Product</h3>
+          <div class="sub-content">
+            <div class="grid">
+              <div class="col-1-2"><label for="model"><span class="label-text">Model Number *</span>  <input type="text" autocomplete="off" class="autocomplete-product registria_field" name="registration[model]" id="model" value="" data-model-string="{name} ({sku})" required="">  <input type="hidden" id="product" name="registration[product_id]" class="registria_field" value=""></label></div>
+              <div class="col-1-2"><label for="serial"><span class="label-text">Serial Number</span><input class="registria_field" id="serial" name="registration[serial_number]" value="" type="text"></label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="sg-header">Personal Information Section</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;sub-content&quot;&gt;
+  &lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;col-1&quot;&gt;&lt;label for=&quot;first_name&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Full Name *&lt;/span&gt; &lt;input type=&quot;text&quot; id=&quot;full_name&quot; class=&quot;full-name&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;&lt;label for=&quot;email&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Email Address *&lt;/span&gt; &lt;input class=&quot;registria_field&quot; id=&quot;email&quot; name=&quot;user[email]&quot; type=&quot;email&quot; value=&quot;&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;&lt;label for=&quot;phone&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Phone Number *&lt;/span&gt; &lt;input class=&quot;registria_field mask-phone&quot; id=&quot;phone&quot; name=&quot;user[phone]&quot; type=&quot;tel&quot; value=&quot;&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;col-3-4&quot;&gt;
+      &lt;label for=&quot;address1&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Street Address *&lt;/span&gt; &lt;input class=&quot;registria_field&quot; id=&quot;address1&quot; name=&quot;user[address_attributes][address1]&quot; placeholder=&quot;Enter a location&quot; type=&quot;text&quot; required=&quot;&quot; autocomplete=&quot;off&quot;&gt;&lt;/label&gt;&lt;!-- Google Address Autofill --&gt;
+      &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+      &lt;div id=&quot;infowindow-content&quot;&gt;&lt;img src=&quot;&quot; width=&quot;16&quot; height=&quot;16&quot; id=&quot;place-icon&quot;&gt; &lt;span id=&quot;place-address&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-1-4&quot;&gt;&lt;label for=&quot;address2&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Unit/Suite&lt;/span&gt;&lt;input class=&quot;registria_field&quot; id=&quot;address2&quot; name=&quot;user[address_attributes][address2]&quot; type=&quot;text&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;col-1-3 med-1&quot;&gt;&lt;label for=&quot;zip&quot;&gt;&lt;i class=&quot;fa fa-map-marker fa-lg geo-trigger&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; &lt;span class=&quot;label-text&quot;&gt;ZIP Code *&lt;/span&gt; &lt;input class=&quot;registria_field reverse-zip&quot; id=&quot;zip&quot; name=&quot;user[address_attributes][zip]&quot; type=&quot;tel&quot; required=&quot;&quot;&gt;  &lt;input class=&quot;registria_field&quot; id=&quot;country&quot; name=&quot;user[address_attributes][country]&quot; type=&quot;hidden&quot; value=&quot;United States&quot;&gt;  &lt;/label&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-1-3 med-1&quot;&gt;&lt;label for=&quot;city&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;City *&lt;/span&gt; &lt;input class=&quot;registria_field&quot; id=&quot;city&quot; name=&quot;user[address_attributes][city]&quot; type=&quot;text&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-1-3 med-1&quot;&gt;&lt;label for=&quot;state&quot;&gt;&lt;span class=&quot;label-text state&quot;&gt;State *&lt;/span&gt; &lt;input class=&quot;registria_field autocomplete-state&quot; id=&quot;state&quot; name=&quot;user[address_attributes][state]&quot; autocomplete=&quot;off&quot; type=&quot;text&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <h3 class="section-header">Your Information</h3>
+          <div class="sub-content">
+            <div class="grid">
+              <div class="col-1"><label for="first_name"><span class="label-text">Full Name *</span> <input type="text" id="full_name" class="full-name" required=""></label></div>
+            </div>
+            <div class="grid">
+              <div class="col-1-2"><label for="email"><span class="label-text">Email Address *</span> <input class="registria_field" id="email" name="user[email]" type="email" value="" required=""></label></div>
+              <div class="col-1-2"><label for="phone"><span class="label-text">Phone Number *</span> <input class="registria_field mask-phone" id="phone" name="user[phone]" type="tel" value="" required=""></label></div>
+            </div>
+            <div class="grid">
+              <div class="col-3-4">
+                <label for="address1"><span class="label-text">Street Address *</span> <input class="registria_field" id="address1" name="user[address_attributes][address1]" placeholder="Enter a location" type="text" required="" autocomplete="off"></label><!-- Google Address Autofill -->
+                <div id="map"></div>
+                <div id="infowindow-content"><img src="" width="16" height="16" id="place-icon"> <span id="place-address"></span></div>
+              </div>
+              <div class="col-1-4"><label for="address2"><span class="label-text">Unit/Suite</span><input class="registria_field" id="address2" name="user[address_attributes][address2]" type="text"></label></div>
+            </div>
+            <div class="grid">
+              <div class="col-1-3 med-1"><label for="zip"><i class="fa fa-map-marker fa-lg geo-trigger" aria-hidden="true"></i> <span class="label-text">ZIP Code *</span> <input class="registria_field reverse-zip" id="zip" name="user[address_attributes][zip]" type="tel" required="">  <input class="registria_field" id="country" name="user[address_attributes][country]" type="hidden" value="United States">  </label></div>
+              <div class="col-1-3 med-1"><label for="city"><span class="label-text">City *</span> <input class="registria_field" id="city" name="user[address_attributes][city]" type="text" required=""></label></div>
+              <div class="col-1-3 med-1"><label for="state"><span class="label-text state">State *</span> <input class="registria_field autocomplete-state" id="state" name="user[address_attributes][state]" autocomplete="off" type="text" required=""></label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="sg-header">Purchase Information</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;sub-content&quot;&gt;
+  &lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;&lt;label for=&quot;purchased_at&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Purchase Location *&lt;/span&gt; &lt;input type=&quot;text&quot; class=&quot;registria_field autocomplete-organizations&quot; name=&quot;registration[purchased_at]&quot; id=&quot;purchased_at&quot; autocomplete=&quot;off&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-1-2&quot;&gt;&lt;label for=&quot;purchase_date&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Date of Purchase *&lt;/span&gt; &lt;input type=&quot;tel&quot; class=&quot;registria_field mask-date&quot; name=&quot;registration[purchase_date]&quot; id=&quot;purchase_date&quot; required=&quot;&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <h3 class="section-header">Purchase Information</h3>
+          <div class="sub-content">
+            <div class="grid">
+              <div class="col-1-2"><label for="purchased_at"><span class="label-text">Purchase Location *</span> <input type="text" class="registria_field autocomplete-organizations" name="registration[purchased_at]" id="purchased_at" autocomplete="off" required=""></label></div>
+              <div class="col-1-2"><label for="purchase_date"><span class="label-text">Date of Purchase *</span> <input type="tel" class="registria_field mask-date" name="registration[purchase_date]" id="purchase_date" required=""></label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="sg-header">Marketing Opt In</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;sm-1 col-2-2&quot;&gt;&lt;label for=&quot;receive_product_communication&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;&quot; id=&quot;receive_product_communication&quot; name=&quot;user[receive_product_communication]&quot; value=&quot;1&quot; checked=&quot;checked&quot;&gt; &lt;span class=&quot;pref-text&quot;&gt; I want to receive marketing communication.&lt;/span&gt;&lt;input type=&quot;hidden&quot; name=&quot;user[receive_product_communication]&quot; class=&quot;real_checkbox registria_field&quot; value=&quot;1&quot;&gt;&lt;/label&gt;&lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <div class="grid">
+            <div class="sm-1 col-2-2"><label for="receive_product_communication"><input type="checkbox" class="" id="receive_product_communication" name="user[receive_product_communication]" value="1" checked="checked"> <span class="pref-text"> I want to receive marketing communication.</span><input type="hidden" name="user[receive_product_communication]" class="real_checkbox registria_field" value="1"></label></div>
+          </div>
+        </div>
+      </div>
+      <h1 class="sg-header">Register Button</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;grid&quot; style=&quot;margin-top:1.5em&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;POST&quot;&gt;
+  &lt;input class=&quot;registria_field&quot; name=&quot;authenticity_token&quot; value=&quot;bv5TyreoEJ6LUCXi+h8OLhRnh1H1wGJUgfc9BwhkK872aJjvEv+LAPY/R++tCF6BQAvEUKqIk/3hNcjCTnrN/Q==&quot; type=&quot;hidden&quot;&gt;
+  &lt;input id=&quot;next_button&quot; value=&quot;Submit Registration&quot; type=&quot;submit&quot;&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <div class="grid" style="margin-top:1.5em">
+            <input type="hidden" name="_method" value="POST">
+            <input class="registria_field" name="authenticity_token" value="bv5TyreoEJ6LUCXi+h8OLhRnh1H1wGJUgfc9BwhkK872aJjvEv+LAPY/R++tCF6BQAvEUKqIk/3hNcjCTnrN/Q==" type="hidden">
+            <input id="next_button" value="Submit Registration" type="submit">
+          </div>
+        </div>
+      </div>
+      <h1 class="sg-header">Footer</h1>
+      <pre class="html display-none"><code>
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-12 privacy_footer&quot;&gt;&lt;a class=&quot;privacy_footer&quot; href=&quot;http://pinnacleclimate.com&quot; target=&quot;_blank&quot;&gt; Privacy Policy&lt;/a&gt;| &copy;2018 Pinnacle Climate &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="wrapper">
+        <div class="main-wrapper">
+          <div class="row">
+            <div class="col-sm-12 privacy_footer"><a class="privacy_footer" href="http://pinnacleclimate.com" target="_blank"> Privacy Policy</a>| ©2018 Pinnacle Climate </div>
+          </div>
+        </div>
+      </div>
+    <script>
+      $("#show-hide-html").click(function(){
+        $(".html").toggleClass('display-none');
+      });
+    </script>
+  </div>
+  </body>
+</html>
